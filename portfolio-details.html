@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Jun 14 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Projects</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+<!-- Portfolio Details Section -->
+<section id="portfolio-details" class="portfolio-details section">
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="portfolio-details-slider swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "navigation": {
+            "nextEl": ".swiper-button-next",
+            "prevEl": ".swiper-button-prev"
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper align-items-center" id="swiper-wrapper">
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div id="details-content" class="row justify-content-between gy-4 mt-4">
+
+      <!-- Placeholder for dynamic content -->
+    </div>
+
+  </div>
+
+</section><!-- /Portfolio Details Section -->
+
+<!-- JavaScript for dynamic content loading -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const portfolio = window.location.hash.substring(1);
+    if (portfolio) {
+      loadPortfolioDetails(portfolio);
+    }
+  });
+
+  function loadPortfolioDetails(portfolio) {
+    let content = '';
+    switch (portfolio) {
+      case 'cookbook':
+        content = `
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/app-1.png" alt="Cook-Book" style="width: 1100px; height: auto;">
+        </div>
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>This is the Cook-Book</h2>
+              <p>Its is the demo for the recipe generator.</p>
+              <p>The Cook-Book is an interactive and visually appealing recipe generator designed to simplify the process of discovering new recipes. Users can explore a diverse array of dishes, each accompanied by a high-quality image and detailed recipe, including ingredients and step-by-step instructions.</p>
+              <div class="testimonial-item">
+                <p><span><strong>Technologies Used:</strong> HTML & CSS, JavaScript, Responsive Web Design</span></p>
+                <div>
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Rahul Neelam</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+              <p><h3>Features:</h3>
+              <ol><strong>Interactive Dish Grid: </strong>Users are presented with a grid of clickable dish images. Upon clicking an image, the page smoothly scrolls to reveal the full recipe for the selected dish.</ol>
+              <ol><strong>Random Recipe Generator: </strong>A "Generate Random Recipe" button allows users to quickly discover a random recipe from the database, making it easy to find culinary inspiration.</ol>
+              <ol><strong>Responsive Design: </strong> The layout is designed to be responsive and user-friendly, ensuring a seamless experience across different devices.</ol>
+              <ol><strong>Enhanced User Experience: </strong>Smooth animations and transitions enhance the overall user experience, making the Cook-Book both functional and enjoyable to use.</ol>
+              </p>
+              <p>This project showcases my ability to create user-friendly and interactive web applications, combining front-end development skills with a focus on enhancing user experience.</p>
+            </div>
+          </div>
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Web design</li>
+                <li><strong>Project date</strong> 10 May 2024</li>
+                <li><strong>Project URL</strong> <a href="https://rahuls-cookbook.netlify.app/">rahuls-cookbook.netlify.app</a></li>
+                <li><a href="https://rahuls-cookbook.netlify.app/" class="btn-visit align-self-start">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>`;
+        break;
+      case 'weatherpulse':
+        content = `
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/app-2.png" alt="WeatherPulse" style="width: 1100px; height: auto;">
+        </div>
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>This is WeatherPulse</h2>
+              <p>Its is the demo for the current Weather Report.</p>
+              <p>WeatherPulse is a dynamic and user-friendly real-time weather checker designed to provide up-to-the-minute weather updates for any location. This demo showcases the core functionality and design elements of the application, demonstrating its ability to deliver accurate and timely weather reports.</p>
+              <div class="testimonial-item">
+                <p><span><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Node.js, Express.js, OpenWeatherMap API</span></p>
+                <div>
+                  <h3>Rahul Neelam</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+              <p><h3>Features:</h3>
+              <ol><strong>Real-Time Updates: </strong>Get current weather conditions, including temperature, humidity, wind speed, and more.</ol>
+              <ol><strong>User-Friendly Interface: </strong>Intuitive design allows users to easily search for and view weather information for any location.</ol>
+              <ol><strong>Responsive Design: </strong> Optimized for both desktop and mobile devices, ensuring a seamless experience across all platforms.</ol>
+              <ol><strong>Accurate Data: </strong>Leveraging reliable weather data sources to ensure the information provided is both current and precise.</ol>
+              </p>
+              <p>This project showcases my ability to create user-friendly and interactive web applications, combining front-end development skills with a focus on enhancing user experience.</p>
+            </div>
+          </div>
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Web design</li>
+                <li><strong>Project date</strong> 10 June 2024</li>
+                <li><strong>Project URL</strong> <a href="https://rahul-weatherpulse.tiiny.site/">https://rahul-weatherpulse.tiiny.site/</a></li>
+                <li><a href="https://rahul-weatherpulse.tiiny.site/" class="btn-visit align-self-start">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>`;
+        break;
+      case 'bmichecker':
+      content = `
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/app-.png" alt="WeatherPulse" style="width: 1100px; height: auto;">
+        </div>
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>This is WeatherPulse</h2>
+              <p>Its is the demo for the current Weather Report.</p>
+              <p>WeatherPulse is a dynamic and user-friendly real-time weather checker designed to provide up-to-the-minute weather updates for any location. This demo showcases the core functionality and design elements of the application, demonstrating its ability to deliver accurate and timely weather reports.</p>
+              <div class="testimonial-item">
+                <p><span><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Node.js, Express.js, OpenWeatherMap API</span></p>
+                <div>
+                  <h3>Rahul Neelam</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+              <p><h3>Features:</h3>
+              <ol><strong>Real-Time Updates: </strong>Get current weather conditions, including temperature, humidity, wind speed, and more.</ol>
+              <ol><strong>User-Friendly Interface: </strong>Intuitive design allows users to easily search for and view weather information for any location.</ol>
+              <ol><strong>Responsive Design: </strong> Optimized for both desktop and mobile devices, ensuring a seamless experience across all platforms.</ol>
+              <ol><strong>Accurate Data: </strong>Leveraging reliable weather data sources to ensure the information provided is both current and precise.</ol>
+              </p>
+              <p>This project showcases my ability to create user-friendly and interactive web applications, combining front-end development skills with a focus on enhancing user experience.</p>
+            </div>
+          </div>
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Web design</li>
+                <li><strong>Project date</strong> 10 June 2024</li>
+                <li><strong>Project URL</strong> <a href="https://rahul-weatherpulse.tiiny.site/">https://rahul-weatherpulse.tiiny.site/</a></li>
+                <li><a href="https://rahul-weatherpulse.tiiny.site/" class="btn-visit align-self-start">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>`;
+        break;
+      default:
+        content = '<p>No project details available.</p>';
+    }
+
+    document.getElementById('details-content').innerHTML = content;
+  }
+</script>
+
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/nagavenkata.rahul/"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/rahul_neel03/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/rahul-neelam-0690a8190/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Rahul-Neelam"><i class="bi bi-github"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
